@@ -1,0 +1,23 @@
+Format: 1.8
+Date: Sun, 01 Jan 2012 17:24:05 +0100
+Source: uglyradio
+Binary: uglyradio
+Architecture: armel
+Version: 0.9.4
+Distribution: unstable
+Urgency: low
+Maintainer: Mikael Hermansson <mike7b4@gmail.com>
+Changed-By: Mikael Hermansson <mike7b4 gmail com>
+Description: 
+ uglyradio  - Very simple Swedish Radio player
+Changes: 
+ uglyradio (0.9.4) unstable; urgency=low
+ .
+   * Splash fixes rotaate if text is to big
+Checksums-Sha1: 
+ 154bde86a4f4d9c7b87c48b4c4289731998ae635 22316 uglyradio_0.9.4_armel.deb
+Checksums-Sha256: 
+ 6a517c9922b068277a6ca8e6711193cd20ade2c5d86b0b545f16d7b7768f6e22 22316 uglyradio_0.9.4_armel.deb
+Files: 
+ 51ae57ef164577e674168c581284809e 22316 user/other optional uglyradio_0.9.4_armel.deb
+Maemo-Display-Name: Ugly Radio
