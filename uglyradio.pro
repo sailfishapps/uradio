@@ -44,7 +44,8 @@ OTHER_FILES += \
     qtc_packaging/debian_harmattan/control \
     qtc_packaging/debian_harmattan/compat \
     qtc_packaging/debian_harmattan/changelog \
-    uglyradio_harmattan.desktop
+    uglyradio_harmattan.desktop \
+    qmlapplicationviewer/qmlapplicationviewer.pri
 
 RESOURCES += \
     res.qrc
@@ -57,4 +58,9 @@ contains(MEEGO_EDITION,harmattan) {
     icon.files = uglyradio.png
     icon.path = /usr/share/icons/hicolor/80x80/apps
     INSTALLS += icon
+}
+
+contains(MEEGO_EDITION,harmattan) {
+    target.path = /opt/uglyradio/bin
+    INSTALLS += target
 }

@@ -1,11 +1,22 @@
 import QtQuick 1.1
 import com.nokia.meego 1.0
 import QtMultimediaKit 1.1
+import QtMobility.feedback 1.1
 Page {
     tools: commonTools
 
     property int retrys
     orientationLock: PageOrientation.LockPortrait
+
+    HapticsEffect {
+        id: vib
+        attackIntensity: 0.0
+        attackTime: 250
+        intensity: 1.0
+        duration: 100
+        fadeTime: 250
+        fadeIntensity: 0.0
+    }
 
 
     Timer
@@ -55,6 +66,7 @@ Page {
     function play(ch, url)
     {
         /* user actually changed channel using button, so retrys will reset */
+        vib.start()
         retrys=0
         channel=ch
         labelStatus.text="please wait..."
@@ -141,6 +153,7 @@ Page {
                 onClicked:
                 {
                     channel=""
+                    vib.start()
                     playMusic.stop()
                 }
             }

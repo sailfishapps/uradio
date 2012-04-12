@@ -1,5 +1,10 @@
+uglyradio (0.9.5) unstable; urgency=low
+  * Haptics when press on buttons
+
+ -- Mikael Hermansson <mike7b4 gmail com>  Thu, 12 Apr 2012 20:09:41 +0200
+
 uglyradio (0.9.4) unstable; urgency=low
-  * Splash fixes rotaate if text is to big
+  * Splash fixes rotate if text is to big
 
  -- Mikael Hermansson <mike7b4 gmail com>  Sun, 01 Jan 2012 17:24:05 +0100
 
