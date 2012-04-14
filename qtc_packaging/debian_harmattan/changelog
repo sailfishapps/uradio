@@ -1,3 +1,8 @@
+uglyradio (0.9.6) unstable; urgency=low
+  * New ikon thanks to Sophie Wikström for this work :)
+
+ -- Mikael Hermansson <mike7b4 gmail com>  Sat, 14 Apr 2012 21:02:27 +0200
+
 uglyradio (0.9.5) unstable; urgency=low
   * Haptics when press on buttons
 

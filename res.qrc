@@ -6,5 +6,6 @@
         <file>qml/uglyradio/MrElop.qml</file>
         <file>qml/uglyradio/TopPanel.qml</file>
         <file>qml/uglyradio/Splash.qml</file>
+        <file>qml/uglyradio/Radio1.qml</file>
     </qresource>
 </RCC>

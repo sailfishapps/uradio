@@ -7,7 +7,7 @@ PageStackWindow {
     initialPage: mainPage
 
     property string channel
-    property string version: "0.9.5"
+    property string version: "0.9.6"
     Component.onCompleted: { theme.inverted = true }
 
     function openFile(file) {

@@ -6,7 +6,6 @@ Page {
     tools: commonTools
 
     property int retrys
-    property int whatx
     orientationLock: PageOrientation.LockPortrait
 
     HapticsEffect {
@@ -110,36 +109,8 @@ Page {
                 anchors {
                     horizontalCenter: parent.horizontalCenter
                 }
-                text: qsTr("Sveriges Radio - P1")
-                onClicked:     play(text, "http://http-live.sr.se/p1-aac-96")
-            }
-            Button{
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                }
-                text: qsTr("Sveriges Radio - P2")
-                onClicked:     play(text, "http://http-live.sr.se/p2-aac-96")
-            }
-            Button{
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                }
-                text: qsTr("Sveriges Radio - P3")
-                onClicked:     play(text, "http://http-live.sr.se/p3-aac-96")
-            }
-            Button{
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                }
-                text: qsTr("Sveriges Radio - P4 Sporten")
-                onClicked:     play(text, "http://http-live.sr.se/p4sport-aac-96")
-            }
-            Button{
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                }
-                text: qsTr("Sveriges Radio - Världen")
-                onClicked:     play(text, "http://http-live.sr.se/srvarlden-aac-96")
+                text: qsTr("Radio1 - Aschberg")
+                onClicked:     play(text, "http://play.radio1.se/catchup/clip/6670")
             }
             Rectangle{
                 height: 20
@@ -158,29 +129,6 @@ Page {
                     playMusic.stop()
                 }
             }
-            /*
-            Rectangle {
-                width: parent.width
-                height: 100
-                MouseArea {
-                    anchors.fill: parent
-                    onPressed:
-                    {
-                        parent.whatx=mouse.x+100
-                        console.log("hello\n");
-                    }
-
-                    onReleased:
-                    {
-                        console.log("hello\n");
-                      // if (mouse.x>parent.whatx)
-                             pageStack.pop()
-                    }
-                }
-             }
-             */
         }
-
     }
-
 }
