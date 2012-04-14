@@ -33,6 +33,7 @@ Page {
         id: playMusic
         onStarted: labelStatus.text="<center><u>Listen to:</u></center><center><b>"+channel+"</center></b>"
         onStopped:{
+            //curSelButton.checked=false;
             if (channel!="" && retrys==100)
             {
                 labelStatus.text="retry "+retrys+" times, gave up :-("
@@ -64,7 +65,7 @@ Page {
 
     }
 
-    function play(ch, url)
+    function play(ch, url, b)
     {
         /* user actually changed channel using button, so retrys will reset */
         vib.start()
@@ -73,20 +74,18 @@ Page {
         labelStatus.text="please wait..."
         playMusic.source=url
         playMusic.play()
+        curSelButton=b
     }
 
     Rectangle{
         anchors.fill: parent
 //        color: "black"
-        gradient: Gradient {
-              GradientStop { position: 0.0; color: "#050505" }
-              GradientStop { position: 1.0; color: "#333333" }
+          gradient: Gradient {
+              GradientStop { position: 0.0; color: "#001155" }
+              GradientStop { position: 1.0; color: "#001122" }
           }
 
 
-        TopPanel{
-            anchors.top: parent.top
-        }
         Splash{
             id: splash
             anchors.centerIn: parent
@@ -95,68 +94,116 @@ Page {
 
         Column {
             spacing: 12
-            anchors.centerIn: parent
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            anchors.left: parent.left
+            anchors.right: parent.right
+            Image{
+                source: "qrc:/uradio_large.png"
+                height: 200
+                width: 200
+                fillMode: Image.PreserveAspectFit
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                }
+
+            }
+//            anchors.centerIn: parent
+            Rectangle{
+                gradient: Gradient {
+                      GradientStop { position: 0.0; color: "#333333" }
+                      GradientStop { position: 1.0; color: "#777777" }
+                  }
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                }
+                height: 3
+                width: parent.width-64
+            }
 
             Label {
                 id: labelStatus
-                color: "magenta"
-                height: 50
+                color: "chocolate"
+                height: 80
                 width: parent.width
                 anchors {
                     horizontalCenter: parent.horizontalCenter
                 }
             }
+
             Button{
                 anchors {
                     horizontalCenter: parent.horizontalCenter
                 }
-                text: qsTr("Sveriges Radio - P1")
-                onClicked:     play(text, "http://http-live.sr.se/p1-aac-96")
-            }
-            Button{
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                }
-                text: qsTr("Sveriges Radio - P2")
-                onClicked:     play(text, "http://http-live.sr.se/p2-aac-96")
-            }
-            Button{
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                }
-                text: qsTr("Sveriges Radio - P3")
-                onClicked:     play(text, "http://http-live.sr.se/p3-aac-96")
-            }
-            Button{
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                }
-                text: qsTr("Sveriges Radio - P4 Sporten")
-                onClicked:     play(text, "http://http-live.sr.se/p4sport-aac-96")
-            }
-            Button{
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                }
-                text: qsTr("Sveriges Radio - Världen")
-                onClicked:     play(text, "http://http-live.sr.se/srvarlden-aac-96")
-            }
-            Rectangle{
-                height: 20
-                width: parent.width
-                opacity: 0.001
-            }
-            Button{
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                }
-                text: qsTr("Stop player")
+                text: qsTr("Stop")
                 onClicked:
                 {
                     channel=""
                     vib.start()
                     playMusic.stop()
                 }
+            }
+            Rectangle{
+                gradient: Gradient {
+                      GradientStop { position: 0.0; color: "#333333" }
+                      GradientStop { position: 1.0; color: "#777777" }
+                  }
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                }
+                height: 3
+                width: parent.width-64
+            }
+
+            Item{
+                /* dumy item */
+                height: 10
+                width: parent.width
+            }
+            Button{
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                }
+        //        checkable: true
+                text: qsTr("SR P1")
+                onClicked:     play(text, "http://http-live.sr.se/p1-aac-96", this)
+            }
+            Button{
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                }
+      //          checkable: true
+                text: qsTr("SR P2")
+                onClicked:     play(text, "http://http-live.sr.se/p2-aac-96", this)
+            }
+            Button{
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                }
+    //            checkable: true
+                text: qsTr("SR P3")
+                onClicked:     play(text, "http://http-live.sr.se/p3-aac-96", this)
+            }
+            Button{
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                }
+  //              checkable: true
+                text: qsTr("SR P4 Sporten")
+                onClicked:     play(text, "http://http-live.sr.se/p4sport-aac-96", this)
+            }
+            Button{
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                }
+//                checkable: true
+                text: qsTr("SR Världen")
+                onClicked:     play(text, "http://http-live.sr.se/srvarlden-aac-96", this)
+            }
+            Rectangle{
+                height: 20
+                width: parent.width
+                opacity: 0.001
             }
             /*
             Rectangle {

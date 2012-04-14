@@ -6,9 +6,10 @@ PageStackWindow {
 
     initialPage: mainPage
 
+    property Button curSelButton
     property string channel
     property string version: "0.9.6"
-    Component.onCompleted: { theme.inverted = true }
+    Component.onCompleted: { theme.inverted=true;   }
 
     function openFile(file) {
         var component = Qt.createComponent(file)
@@ -41,11 +42,15 @@ PageStackWindow {
         visualParent: pageStack
         MenuLayout {
             MenuItem {
+                text: qsTr("Settings")
+                onClicked: openFile("Settings.qml")
+            }
+            MenuItem {
                 text: qsTr("Mr Elop!")
                 onClicked: openFile("MrElop.qml")
             }
             MenuItem {
-                text: qsTr("About Ugly Radio")
+                text: qsTr("About URadio")
                 onClicked: openFile("AboutPage.qml")
             }
         }

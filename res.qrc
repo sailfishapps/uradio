@@ -7,5 +7,7 @@
         <file>qml/uglyradio/TopPanel.qml</file>
         <file>qml/uglyradio/Splash.qml</file>
         <file>qml/uglyradio/Radio1.qml</file>
+        <file>uradio_large.png</file>
+        <file>qml/uglyradio/Settings.qml</file>
     </qresource>
 </RCC>

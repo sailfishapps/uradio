@@ -45,7 +45,8 @@ OTHER_FILES += \
     qtc_packaging/debian_harmattan/compat \
     qtc_packaging/debian_harmattan/changelog \
     uglyradio_harmattan.desktop \
-    qmlapplicationviewer/qmlapplicationviewer.pri
+    qmlapplicationviewer/qmlapplicationviewer.pri \
+    uradio_large.png
 
 RESOURCES += \
     res.qrc

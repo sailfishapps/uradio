@@ -7,14 +7,14 @@ Rectangle {
     color: "black"
     opacity: 0.7
     z: 1
-    rotation: channel.replace("Sveriges Radio - ", "").length>4 ? 90 : 0
+    rotation: channel.replace("SR ", "").length>4 ? 90 : 0
     Text {
         id: idText
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.verticalCenter
         font.pointSize: channel=="" ? 76 : 128
         color: "hotpink"
-        text: channel=="" ? "Ugly Radio<br /><center>v"+version+"</center>" : channel.replace("Sveriges Radio - ", "")
+        text: channel=="" ? "Ugly Radio<br /><center>v"+version+"</center>" : channel.replace("SR ", "")
     }
 
     states: [
