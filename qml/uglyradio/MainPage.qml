@@ -106,6 +106,10 @@ Page {
                 anchors {
                     horizontalCenter: parent.horizontalCenter
                 }
+                MouseArea{
+                    anchors.fill: parent
+                    onClicked: openFile("AboutPage.qml");
+                }
 
             }
 //            anchors.centerIn: parent
