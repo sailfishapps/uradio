@@ -1,56 +1,61 @@
-uglyradio (0.9.7) unstable; urgency=low
+uradio (0.9.8) unstable; urgency=low
+  * Prepare for Nokiastore
+
+ -- Mikael Hermansson <mike7b4 gmail com>  Sat, 02 Jun 2012 12:36:05 +0200
+
+uradio (0.9.7) unstable; urgency=low
   * New background image
 
  -- Mikael Hermansson <mike7b4 gmail com>  Sun, 15 Apr 2012 13:47:10 +0200
 
-uglyradio (0.9.6) unstable; urgency=low
+uradio (0.9.6) unstable; urgency=low
   * New icon thanks to Sophie Wikström for this work.
 
   * Some redesign credit goes to Sophie for design tip.
 
  -- Mikael Hermansson <mike7b4 gmail com>  Sat, 14 Apr 2012 21:02:27 +0200
 
-uglyradio (0.9.5) unstable; urgency=low
+uradio (0.9.5) unstable; urgency=low
   * Haptics when press on buttons
 
  -- Mikael Hermansson <mike7b4 gmail com>  Thu, 12 Apr 2012 20:09:41 +0200
 
-uglyradio (0.9.4) unstable; urgency=low
+uradio (0.9.4) unstable; urgency=low
   * Splash fixes rotate if text is to big
 
  -- Mikael Hermansson <mike7b4 gmail com>  Sun, 01 Jan 2012 17:24:05 +0100
 
-uglyradio (0.9.3) unstable; urgency=low
+uradio (0.9.3) unstable; urgency=low
   * <Add change description here>
 
  -- Mikael Hermansson <mike7b4 gmail com>  Sun, 01 Jan 2012 17:24:04 +0100
 
-uglyradio (0.9.2) unstable; urgency=low
+uradio (0.9.2) unstable; urgency=low
   * Rename back to uglyradio and add another icon. Change theme to Pink and add gradient background to make it look cooler.
 
  -- Mikael Hermansson <mike7b4 gmail com>  Thu, 29 Dec 2011 19:33:31 +0100
 
-uglyradio (0.9.1) unstable; urgency=low
+uradio (0.9.1) unstable; urgency=low
   * splashscreen when in thumbnailmode
 
  -- Mikael Hermansson <mike7b4 gmail com>  sat, 11 dec 2011 23:49:32 +0100
 
-uglyradio (0.9.0) unstable; urgency=low
+uradio (0.9.0) unstable; urgency=low
   * UI improvements and new Icon
 
  -- Mikael Hermansson <mike7b4 gmail com>  fre, 09 dec 2011 22:00:44 +0100
 
-uglyradio (0.0.3) unstable; urgency=low
+uradio (0.0.3) unstable; urgency=low
   * <Add change description here>
 
  -- Mikael Hermansson <tyan@unknown>  tis, 08 nov 2011 23:03:27 +0100
 
-uglyradio (0.0.2) unstable; urgency=low
+uradio (0.0.2) unstable; urgency=low
   * <Add change description here>
 
  -- Mikael Hermansson <tyan@unknown>  tis, 08 nov 2011 23:03:26 +0100
 
-uglyradio (0.0.1) unstable; urgency=low
+uradio (0.0.1) unstable; urgency=low
 
   * Initial Release.
 

@@ -1,13 +1,13 @@
 <RCC>
     <qresource prefix="/">
-        <file>qml/uglyradio/AboutPage.qml</file>
-        <file>qml/uglyradio/main.qml</file>
-        <file>qml/uglyradio/MainPage.qml</file>
-        <file>qml/uglyradio/MrElop.qml</file>
-        <file>qml/uglyradio/TopPanel.qml</file>
-        <file>qml/uglyradio/Splash.qml</file>
-        <file>qml/uglyradio/Radio1.qml</file>
         <file>uradio_large.png</file>
-        <file>qml/uglyradio/Settings.qml</file>
+        <file>qml/uradio/AboutPage.qml</file>
+        <file>qml/uradio/main.qml</file>
+        <file>qml/uradio/MainPage.qml</file>
+        <file>qml/uradio/MrElop.qml</file>
+        <file>qml/uradio/Radio1.qml</file>
+        <file>qml/uradio/Settings.qml</file>
+        <file>qml/uradio/Splash.qml</file>
+        <file>qml/uradio/TopPanel.qml</file>
     </qresource>
 </RCC>

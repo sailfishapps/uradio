@@ -8,7 +8,7 @@ PageStackWindow {
 
     property Button curSelButton
     property string channel
-    property string version: "0.9.7"
+    property string version: "0.9.8"
     Component.onCompleted: {
         theme.inverted=true;
     }

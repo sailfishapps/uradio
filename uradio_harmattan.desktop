@@ -3,9 +3,9 @@ Encoding=UTF-8
 Version=1.0
 Type=Application
 Terminal=false
-Name=Ugly Radio
-Exec=/usr/bin/invoker --type=d -s /opt/uglyradio/bin/uglyradio
-Icon=/usr/share/icons/hicolor/80x80/apps/uglyradio.png
+Name=URadio
+Exec=/usr/bin/invoker --type=d -s /opt/uradio/bin/uradio
+Icon=/usr/share/icons/hicolor/80x80/apps/uradio.png
 X-Window-Icon=
 X-HildonDesk-ShowInToolbar=true
 X-Osso-Type=application/x-executable
