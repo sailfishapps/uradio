@@ -14,7 +14,7 @@ Rectangle {
         anchors.verticalCenter: parent.verticalCenter
         font.pointSize: channel=="" ? 76 : 128
         color: "hotpink"
-        text: channel=="" ? "Ugly Radio<br /><center>v"+version+"</center>" : channel.replace("SR ", "")
+        text: channel=="" ? "URadio<br /><center>v"+version+"</center>" : channel.replace("SR ", "")
     }
 
     states: [

@@ -1,5 +1,5 @@
 # Add more folders to ship with the application, here
-folder_01.source = qml/uglyradio
+folder_01.source = qml/uradio
 folder_01.target = qml
 DEPLOYMENTFOLDERS = folder_01
 
@@ -44,9 +44,11 @@ OTHER_FILES += \
     qtc_packaging/debian_harmattan/control \
     qtc_packaging/debian_harmattan/compat \
     qtc_packaging/debian_harmattan/changelog \
-    uglyradio_harmattan.desktop \
+    uradio_harmattan.desktop \
     qmlapplicationviewer/qmlapplicationviewer.pri \
-    uradio_large.png
+    uradio_large.png \
+    cross.png \
+    stripes.png
 
 RESOURCES += \
     res.qrc
@@ -56,12 +58,14 @@ RESOURCES += \
 
 
 contains(MEEGO_EDITION,harmattan) {
-    icon.files = uglyradio.png
+    icon.files = uradio.png
     icon.path = /usr/share/icons/hicolor/80x80/apps
-    INSTALLS += icon
+    images.files = cross.png stripes.png cross.jpg
+    images.path = /opt/uradio/images
+    INSTALLS += icon images
 }
 
 contains(MEEGO_EDITION,harmattan) {
-    target.path = /opt/uglyradio/bin
+    target.path = /opt/uradio/bin
     INSTALLS += target
 }

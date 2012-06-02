@@ -6,14 +6,6 @@ import com.nokia.meego 1.0
 Page {
  //   tools: backTools
     orientationLock: PageOrientation.LockPortrait
-    Rectangle{
-        id: rectangle1
-        gradient: Gradient {
-              GradientStop { position: 0.0; color: "#001155" }
-              GradientStop { position: 1.0; color: "#001122" }
-          }
-
-        anchors.fill: parent
         Column{
             id: column1
             anchors.fill: parent
@@ -91,7 +83,6 @@ Page {
             anchors.fill: parent
             onClicked: pageStack.pop()
         }
-    }
     /*
     ToolBarLayout {
         id: backTools

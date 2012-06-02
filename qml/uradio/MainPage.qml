@@ -77,14 +77,16 @@ Page {
         curSelButton=b
     }
 
-    Rectangle{
-        anchors.fill: parent
-//        color: "black"
-          gradient: Gradient {
+//    Rectangle{
+    //      anchors.fill: parent
+      //  opacity: 0.0
+        //        color: "black"
+/*
+        gradient: Gradient {
               GradientStop { position: 0.0; color: "#001155" }
               GradientStop { position: 1.0; color: "#001122" }
           }
-
+*/
 
         Splash{
             id: splash
@@ -230,7 +232,7 @@ Page {
                 }
              }
              */
-        }
+        //}
 
     }
 

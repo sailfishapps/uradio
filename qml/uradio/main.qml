@@ -8,12 +8,14 @@ PageStackWindow {
 
     property Button curSelButton
     property string channel
-    property string version: "0.9.6"
-    Component.onCompleted: { theme.inverted=true;   }
+    property string version: "0.9.7"
+    Component.onCompleted: {
+        theme.inverted=true;
+    }
 
     function openFile(file) {
         var component = Qt.createComponent(file)
-
+        console.log("yeah")
            if (component.status == Component.Ready)
                   pageStack.push(component);
          //  else
@@ -21,6 +23,13 @@ PageStackWindow {
 
 
      }
+
+    platformStyle: PageStackWindowStyle {
+//             landscapeBackground: "backgroundImageLandscape.png"
+       //      portraitBackground: "file://opt/uglyradio/images/cross.png"
+             background: "file://opt/uglyradio/images/stripes.png"
+             backgroundFillMode: Image.Stretch
+         }
 
     MainPage {
         id: mainPage
@@ -41,10 +50,12 @@ PageStackWindow {
         id: myMenu
         visualParent: pageStack
         MenuLayout {
+/*
             MenuItem {
                 text: qsTr("Settings")
                 onClicked: openFile("Settings.qml")
             }
+      */
             MenuItem {
                 text: qsTr("Mr Elop!")
                 onClicked: openFile("MrElop.qml")

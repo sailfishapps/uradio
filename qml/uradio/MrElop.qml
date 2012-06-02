@@ -2,55 +2,57 @@ import QtQuick 1.1
 import com.nokia.meego 1.0
 
 Page {
-    Rectangle{
-        gradient: Gradient {
-              GradientStop { position: 0.0; color: "#050505" }
-              GradientStop { position: 1.0; color: "#333333" }
-          }
+    id: page1
+    orientationLock: PageOrientation.LockPortrait
+    Column{
 
+        id: column1
+        anchors.centerIn: parent
+        spacing: 5
+        Text {
+            font.pixelSize: 72
+            color: "green"
+            text: "Mr Elop!"
+            horizontalAlignment: Text.AlignHCenter
+            anchors.horizontalCenter: parent.horizontalCenter
 
-        width: parent.width
-        height: parent.height
-        Column{
-
-            id: column1
-            anchors.centerIn: parent
-            spacing: 5
-            Text {
-                font.pixelSize: 72
-                color: "green"
-                text: "Mr Elop!"
-                anchors.horizontalCenter: parent.horizontalCenter
-
-            }
-
-
-            Text {
-                font.pixelSize: 48
-                color: "magenta"
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: "<center>Maemo</center><center>Harmattan</center><center>and</center><center>Qt</center>"
-
-            }
-            Text {
-                font.pixelSize: 48
-                color: "cyan"
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: "<u>ROCKS!</u>"
-
-            }
-            Text {
-                font.pixelSize: 48
-                color: "white"
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: "It <b>must</b> stay!"
-
-            }
         }
-        MouseArea{
-            anchors.fill: parent
-            onClicked: pageStack.pop()
+
+
+        Text {
+           // width: 100
+            height: 120
+            font.pixelSize: 48
+            color: "chocolate"
+            text: "Maemo6 Harmattan<br />and QtQuick"
+            verticalAlignment: Text.AlignVCenter
+            horizontalAlignment: Text.AlignHCenter
+            wrapMode: Text.NoWrap
+
         }
+        Text {
+            height: 120
+            font.pixelSize: 48
+            color: "cyan"
+            anchors.horizontalCenter: parent.horizontalCenter
+            text: "is a great platform!"
+            verticalAlignment: Text.AlignVCenter
+            wrapMode: Text.WordWrap
+            horizontalAlignment: Text.AlignHCenter
+
+        }
+        Text {
+            font.pixelSize: 48
+            color: "white"
+            anchors.horizontalCenter: parent.horizontalCenter
+            text: "It <b>must</b> stay!"
+
+        }
+    }
+    MouseArea{
+        anchors.fill: parent
+
+        onClicked: pageStack.pop()
     }
     /*
     ToolBarLayout {
