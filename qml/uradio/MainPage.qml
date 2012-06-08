@@ -20,18 +20,11 @@ Page {
     }
 
 
-    Timer
-    {
-        id: timer
-        interval: 1000; running: false; repeat: false
-        onTriggered:{
-            playMusic.play()
-        }
-    }
-
     Audio {
         id: playMusic
-        onStarted: labelStatus.text="<center><u>Listen to:</u></center><center><b>"+channel+"</center></b>"
+        onStarted: {
+            /* because QML is broken */
+            timer2.start() }
         onStopped:{
             //curSelButton.checked=false;
             if (channel!="" && retrys==100)
@@ -51,6 +44,32 @@ Page {
         }
         onError: labelStatus.text="broken pipe"
     }
+
+
+    Timer
+    {
+        id: timer
+        interval: 1000; running: false; repeat: false
+        onTriggered:{
+            playMusic.play()
+        }
+    }
+
+    Timer
+    {
+        id: timer2
+        interval:500; running: false; repeat: true
+        onTriggered:{
+            if (playMusic.status==Audio.Buffered)
+            {
+                timer2.stop();
+                labelStatus.text="<u>Listen to:</u></center><center><b>"+channel+"</b>"
+            }
+
+
+        }
+    }
+
 
     function f(err, str)
     {
@@ -130,6 +149,7 @@ Page {
             Label {
                 id: labelStatus
                 color: "chocolate"
+                horizontalAlignment: Text.AlignHCenter
                 height: 80
                 width: parent.width
                 anchors {

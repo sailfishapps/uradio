@@ -26,8 +26,8 @@ PageStackWindow {
 
     platformStyle: PageStackWindowStyle {
 //             landscapeBackground: "backgroundImageLandscape.png"
-       //      portraitBackground: "file://opt/uglyradio/images/cross.png"
-             background: "file://opt/uglyradio/images/stripes.png"
+       //      portraitBackground: "file://opt/uradio/images/cross.png"
+             background: "file://opt/uradio/images/stripes.png"
              backgroundFillMode: Image.Stretch
          }
 
