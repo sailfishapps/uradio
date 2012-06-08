@@ -24,7 +24,8 @@ Page {
         id: playMusic
         onStarted: {
             /* because QML is broken */
-            timer2.start() }
+        //    labelStatus.text="Please wait..."
+        }
         onStopped:{
             //curSelButton.checked=false;
             if (channel!="" && retrys==100)
@@ -43,6 +44,14 @@ Page {
             }
         }
         onError: labelStatus.text="broken pipe"
+
+        onStatusChanged: {
+            if (playMusic.status==Audio.Buffered)
+            {
+                labelStatus.text="<u>Listen to:</u></center><center><b>"+channel+"</b>"
+            }
+        }
+
     }
 
 
@@ -52,21 +61,6 @@ Page {
         interval: 1000; running: false; repeat: false
         onTriggered:{
             playMusic.play()
-        }
-    }
-
-    Timer
-    {
-        id: timer2
-        interval:500; running: false; repeat: true
-        onTriggered:{
-            if (playMusic.status==Audio.Buffered)
-            {
-                timer2.stop();
-                labelStatus.text="<u>Listen to:</u></center><center><b>"+channel+"</b>"
-            }
-
-
         }
     }
 
@@ -89,9 +83,11 @@ Page {
         /* user actually changed channel using button, so retrys will reset */
         vib.start()
         retrys=0
-        channel=ch
-        labelStatus.text="please wait..."
+        channel=""
+        playMusic.stop()
+        labelStatus.text="please wait...\nBuffering..."
         playMusic.source=url
+        channel=ch
         playMusic.play()
         curSelButton=b
     }
