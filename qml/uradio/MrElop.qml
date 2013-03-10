@@ -1,15 +1,14 @@
 import QtQuick 1.1
-import com.nokia.meego 1.0
+import Sailfish.Silica 1.0
 
 Page {
     id: page1
-    orientationLock: PageOrientation.LockPortrait
     Column{
 
         id: column1
         anchors.centerIn: parent
         spacing: 5
-        Text {
+        Label {
             font.pixelSize: 72
             color: "green"
             text: "Mr Elop!"
@@ -19,34 +18,37 @@ Page {
         }
 
 
-        Text {
+        Label {
            // width: 100
             height: 120
             font.pixelSize: 48
             color: "chocolate"
-            text: "Maemo6 Harmattan<br />and QtQuick"
+            text: "Nokia really should<br />consider purchasing"
             verticalAlignment: Text.AlignVCenter
             horizontalAlignment: Text.AlignHCenter
-            wrapMode: Text.NoWrap
+            anchors.horizontalCenter: parent.horizontalCenter
+            wrapMode: Text.WordWrap
 
         }
-        Text {
+        Label {
             height: 120
             font.pixelSize: 48
             color: "cyan"
             anchors.horizontalCenter: parent.horizontalCenter
-            text: "is a great platform!"
+            text: "SailfishOS License"
             verticalAlignment: Text.AlignVCenter
             wrapMode: Text.WordWrap
             horizontalAlignment: Text.AlignHCenter
 
         }
-        Text {
+        Label {
             font.pixelSize: 48
             color: "white"
+            text: "On nextgen<br />Nokia devices!"
             anchors.horizontalCenter: parent.horizontalCenter
-            text: "It <b>must</b> stay!"
-
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignHCenter
+            wrapMode: Text.WordWrap
         }
     }
     MouseArea{

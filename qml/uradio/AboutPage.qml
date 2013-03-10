@@ -1,11 +1,7 @@
 import QtQuick 1.1
-import com.nokia.meego 1.0
-
-
-
+import Sailfish.Silica 1.0
 Page {
  //   tools: backTools
-    orientationLock: PageOrientation.LockPortrait
         Column{
             id: column1
             anchors.fill: parent
@@ -19,7 +15,6 @@ Page {
                 anchors {
                     horizontalCenter: parent.horizontalCenter
                 }
-
             }
 //            anchors.centerIn: parent
 

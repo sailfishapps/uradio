@@ -1,14 +1,14 @@
-#include <QtGui/QApplication>
-#include "qmlapplicationviewer.h"
+#include <QApplication>
+#include <QDeclarativeView>
+#include <QDeclarativeContext>
+#include "sailfishapplication.h"
 
 Q_DECL_EXPORT int main(int argc, char *argv[])
 {
-    QScopedPointer<QApplication> app(createApplication(argc, argv));
-    QScopedPointer<QmlApplicationViewer> viewer(QmlApplicationViewer::create());
+    QScopedPointer<QApplication> app(Sailfish::createApplication(argc, argv));
+    QScopedPointer<QDeclarativeView> view(Sailfish::createView("qml/uradio/main.qml"));
 
-    viewer->setOrientation(QmlApplicationViewer::ScreenOrientationAuto);
-    viewer->setMainQmlFile(QLatin1String("qml/uradio/main.qml"));
-    viewer->showExpanded();
+    Sailfish::showView(view.data());
 
     return app->exec();
 }
