@@ -76,14 +76,12 @@ Page {
                     horizontalCenter: parent.horizontalCenter
                 }
                 text: qsTr("Stop")
-                /*
                 onClicked:
                 {
-                    //channel=""
-        //            vib.start()
-                   //S playMusic.stop()
+                    channel=""
+                    vib.start()
+                    playMusic.stop()
                 }
-                */
             }
             Rectangle{
                 gradient: Gradient {
