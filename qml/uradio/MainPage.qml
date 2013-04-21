@@ -62,10 +62,11 @@ Page {
 
             Label {
                 id: labelStatus
-                color: "chocolate"
+                color: theme.primaryColor
                 horizontalAlignment: Text.AlignHCenter
                 height: 80
                 width: parent.width
+                font.pixelSize: theme.fontSizeMedium
                 anchors {
                     horizontalCenter: parent.horizontalCenter
                 }
